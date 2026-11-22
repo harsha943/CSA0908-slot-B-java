@@ -1,0 +1,14 @@
+===== java ParkingFacility =====
+[0, 0]
+[0, 1]
+[1, 0]
+null
+true false false
+[0, 1]
+[exit 0]
+
+===== java ParkingFacilityStack =====
+Linear scan allocate x500 : 10.467 ms
+Stack-based allocate x500 : 0.740 ms
+[exit 0]
+

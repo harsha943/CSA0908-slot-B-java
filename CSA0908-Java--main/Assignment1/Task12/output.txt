@@ -1,0 +1,12 @@
+===== java SmartParkingV2 =====
+Floors: 5, total slots: 260
+EBike        TN11E1  in 10:00 for 300 min -> expected   20.0 actual   20.0 PASS
+EBike        TN11E2  in 10:00 for   0 min -> expected    0.0 actual    0.0 PASS
+DeliveryVan  TN12D1  in 10:00 for 120 min -> expected  120.0 actual  120.0 PASS
+DeliveryVan  TN12D2  in 16:00 for 120 min -> expected   90.0 actual   90.0 PASS
+DeliveryVan  TN12D3  in 07:00 for  60 min -> expected   30.0 actual   30.0 PASS
+Car2         TN13C1  in 10:00 for 130 min -> expected   90.0 actual   90.0 PASS
+Car2         TN10V1  in 10:00 for 300 min -> expected    0.0 actual    0.0 PASS
+7/7 tests passed
+[exit 0]
+

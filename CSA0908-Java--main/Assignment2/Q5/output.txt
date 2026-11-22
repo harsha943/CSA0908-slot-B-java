@@ -1,0 +1,13 @@
+===== java LeaderboardDemo =====
+[Eagles(9,6), Bisons(9,4), Panthers(9,4), Cobras(6,1)]
+[exit 0]
+
+===== java RankingTests =====
+Ties data set : [TeamR[name=Lions, points=9, goalDiff=6], TeamR[name=Ants, points=9, goalDiff=4], TeamR[name=Zebras, points=9, goalDiff=4], TeamR[name=Owls, points=6, goalDiff=5], TeamR[name=Bears, points=6, goalDiff=2], TeamR[name=Crows, points=6, goalDiff=2]]
+Subtraction comparator (faulty): [TeamR[name=Zero, points=0, goalDiff=0], TeamR[name=Min, points=-2147483648, goalDiff=0], TeamR[name=Max, points=2147483647, goalDiff=0]]
+comparingInt comparator (correct): [TeamR[name=Max, points=2147483647, goalDiff=0], TeamR[name=Zero, points=0, goalDiff=0], TeamR[name=Min, points=-2147483648, goalDiff=0]]
+Missing tie-breaker gives input-dependent order: [TeamR[name=B, points=5, goalDiff=1], TeamR[name=A, points=5, goalDiff=1]] vs [TeamR[name=A, points=5, goalDiff=1], TeamR[name=B, points=5, goalDiff=1]]
+Players       : [Player[name=Sam, points=15, goalDiff=0], Player[name=Anu, points=12, goalDiff=3], Player[name=Ravi, points=12, goalDiff=3]]
+3 stable sorts: [TeamR[name=Lions, points=9, goalDiff=6], TeamR[name=Ants, points=9, goalDiff=4], TeamR[name=Zebras, points=9, goalDiff=4], TeamR[name=Owls, points=6, goalDiff=5], TeamR[name=Bears, points=6, goalDiff=2], TeamR[name=Crows, points=6, goalDiff=2]]  same? true
+[exit 0]
+

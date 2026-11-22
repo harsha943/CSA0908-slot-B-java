@@ -1,0 +1,30 @@
+===== java PassStore =====
+[P1003, 192311003, Divya, 7, 3800.0]
+null
+[exit 0]
+
+===== java BusPassFileStore =====
+Test                         | Result
+find P2 (name contains '|')  | Pass[passId=P2, regNo=192311002, name=Divya | Rao, route=7, stop=Bus Stand, validTill=2027-05-31, amount=3800.0]
+find P99 (does not exist)    | null
+find P3 (damaged line)       | null
+list route 12                | [P1, P5]
+damaged lines detected       | [line 3: 2 fields, line 4: empty, line 5: NumberFormatException]
+missing file find            | null
+
+Growth: time to find the LAST pass (worst case linear scan)
+     1,000 records:    15.13 ms per find
+     1,000 records:     6.97 ms per find
+    10,000 records:    22.72 ms per find
+    50,000 records:    44.53 ms per find
+   100,000 records:    75.79 ms per find
+[exit 0]
+
+===== java LineCounter =====
+  size      lines  unbuffered ms    buffered ms      byte[] ms     readAll ms
+   1MB     29,128         2318.9           26.3            4.8           14.6
+  10MB    291,272        21378.5          196.0            5.6           34.7
+  50MB  1,456,356       109241.3          976.1           25.6          197.6
+Unbuffered read() calls = file size in bytes (e.g. ~52 million for 50 MB).
+[exit 0]
+

@@ -1,0 +1,12 @@
+===== java LeaderboardRedesign =====
+Prediction: original grows ~ n log n per refresh, redesign ~ log n.
+
+   teams    updates    original (ms)    redesign (ms)    same?
+   1,000      2,000           574.70             5.77     true
+   1,000      2,000           515.18             3.78     true
+  10,000      2,000          6087.51             2.54     true
+  50,000      2,000         31623.30             2.96     true
+
+Trade-off: TreeSet uses one tree node (~40 bytes) per team plus the HashMap index; for a single end-of-day ranking the original one-shot sort is simpler and as fast.
+[exit 0]
+

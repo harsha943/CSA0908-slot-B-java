@@ -1,0 +1,29 @@
+===== java AtmSimulation test =====
+> input: "2000", card=C:\Users\prana\AppData\Local\Temp\card9834716267253993063.txt
+  Dispensed Rs 2000 from 123456789, balance 8000.0
+  [finally] session closed, card returned
+> input: "abc", card=C:\Users\prana\AppData\Local\Temp\card9834716267253993063.txt
+  [multi-catch] Not a number: InputMismatchException
+  [finally] session closed, card returned
+> input: "-500", card=C:\Users\prana\AppData\Local\Temp\card9834716267253993063.txt
+  [catch IllegalArgument] Amount must be positive
+  [finally] session closed, card returned
+> input: "50000", card=C:\Users\prana\AppData\Local\Temp\card9834716267253993063.txt
+  [catch InsufficientFunds] Balance 8000.0 < 50000
+  [finally] session closed, card returned
+> input: "1000", card=missing_card.txt
+  [catch FileNotFound] Card reader file missing: missing_card.txt (The system cannot find the file specified)
+  [finally] session closed, card returned
+> input: "1000", card=C:\Users\prana\AppData\Local\Temp\badcard17452898315169378003.txt
+  [multi-catch] Not a number: NumberFormatException
+  [finally] session closed, card returned
+
+Uncaught exception demo (stack trace):
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:945)
+	at java.base/java.util.Scanner.next(Scanner.java:1602)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2267)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2221)
+	at AtmSimulation.main(AtmSimulation.java:67)
+[exit 1]
+

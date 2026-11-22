@@ -1,0 +1,40 @@
+===== java PlaylistBenchmark =====
+
+Playlist size 1,000 (times in ms for 2,000 ops)
+Operation                 ArrayList   LinkedList
+add at end                    0.165        0.253
+insert/remove front           1.629        0.748
+insert/remove middle          1.082        4.123
+get k-th                      0.562        1.683
+iterate whole list            0.223        0.298
+
+Playlist size 1,000 (times in ms for 2,000 ops)
+Operation                 ArrayList   LinkedList
+add at end                    0.131        0.124
+insert/remove front           1.179        0.285
+insert/remove middle          1.148        3.648
+get k-th                      0.239        1.062
+iterate whole list            0.081        0.098
+
+Playlist size 10,000 (times in ms for 2,000 ops)
+Operation                 ArrayList   LinkedList
+add at end                    0.115        0.128
+insert/remove front           3.731        0.250
+insert/remove middle          2.413       36.469
+get k-th                      0.254        8.474
+iterate whole list            0.655        0.469
+
+Playlist size 100,000 (times in ms for 2,000 ops)
+Operation                 ArrayList   LinkedList
+add at end                    0.124        0.382
+insert/remove front          34.575        0.093
+insert/remove middle         15.905      328.155
+get k-th                      0.129       80.733
+iterate whole list            1.334        1.083
+
+Up Next queue: 100000 addFirst/addLast + pollFirst
+  ArrayDeque : 11.614 ms
+  LinkedList : 21.548 ms
+  ArrayList  : 38.927 ms (only 20,000 ops)
+[exit 0]
+

@@ -1,0 +1,29 @@
+===== java PharmacyInventory =====
+
+Medicines: 1,000
+  HashMap        put     0.42 ms | 100k get    13.69 ms (137 ns/get) | code report    1.88 ms OK | insertion report   0.13 ms WRONG ORDER
+  TreeMap        put     1.62 ms | 100k get    16.02 ms (160 ns/get) | code report    0.50 ms OK | insertion report   0.15 ms WRONG ORDER
+  LinkedHashMap  put     0.70 ms | 100k get     3.78 ms (38 ns/get) | code report    1.03 ms OK | insertion report   0.04 ms OK
+  SortedArray    sort    0.76 ms | 100k binarySearch    20.81 ms | code report free (already sorted), found=100000
+
+Medicines: 1,000
+  HashMap        put     0.32 ms | 100k get     3.24 ms (32 ns/get) | code report    0.82 ms OK | insertion report   0.06 ms WRONG ORDER
+  TreeMap        put     0.70 ms | 100k get    14.25 ms (143 ns/get) | code report    0.14 ms OK | insertion report   0.07 ms WRONG ORDER
+  LinkedHashMap  put     0.34 ms | 100k get     3.39 ms (34 ns/get) | code report    0.72 ms OK | insertion report   0.03 ms OK
+  SortedArray    sort    0.65 ms | 100k binarySearch    13.79 ms | code report free (already sorted), found=100000
+
+Medicines: 50,000
+  HashMap        put    21.62 ms | 100k get    37.15 ms (371 ns/get) | code report   22.26 ms OK | insertion report   1.81 ms WRONG ORDER
+  TreeMap        put    34.78 ms | 100k get    57.16 ms (572 ns/get) | code report    9.00 ms OK | insertion report   5.45 ms WRONG ORDER
+  LinkedHashMap  put    11.79 ms | 100k get    11.76 ms (118 ns/get) | code report   38.97 ms OK | insertion report   2.23 ms OK
+  SortedArray    sort   67.97 ms | 100k binarySearch    42.49 ms | code report free (already sorted), found=100000
+
+Medicines: 500,000
+  HashMap        put    88.52 ms | 100k get    21.96 ms (220 ns/get) | code report  145.26 ms OK | insertion report  14.67 ms WRONG ORDER
+  TreeMap        put   545.69 ms | 100k get   111.93 ms (1119 ns/get) | code report   57.92 ms OK | insertion report  60.07 ms WRONG ORDER
+  LinkedHashMap  put   117.51 ms | 100k get    23.76 ms (238 ns/get) | code report  377.17 ms OK | insertion report   5.49 ms OK
+  SortedArray    sort  425.29 ms | 100k binarySearch    73.49 ms | code report free (already sorted), found=100000
+
+Acceptable lookup criterion used: < 1 microsecond per lookup.
+[exit 0]
+

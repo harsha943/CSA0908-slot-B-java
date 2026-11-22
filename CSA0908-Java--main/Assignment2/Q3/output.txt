@@ -1,0 +1,13 @@
+===== java Attendance =====
+Unique students: 2
+[exit 0]
+
+===== java HashContractExperiments =====
+Test 1 predicted 2, actual 2
+Test 2 predicted 3 (identity hash differs), actual 3
+Test 3a after mutation: contains(m)=false, size=1, remove(m)=false  (object is lost in wrong bucket)
+Test 3b TreeSet by name predicted 1 (wrongly merged), actual 1
+HashMap<String,Student> unique = 3, TreeSet(by regNo) unique = 3
+200,000 scans: HashSet 59.75 ms, TreeSet 85.43 ms
+[exit 0]
+

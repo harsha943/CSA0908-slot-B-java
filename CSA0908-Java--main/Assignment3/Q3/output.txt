@@ -1,0 +1,9 @@
+===== java SalesReport =====
+Good input: manual=660.0  twr=660.0  same report? true
+Manual version failed (NumberFormatException), files left open: 1
+Nov 21, 2026 8:18:48 PM SalesReport twrVersion
+WARNING: Corrupt data in store4.csv: For input string: "ABC"
+TWR    version failed (NumberFormatException), files left open: 0
+Primary: body failed, suppressed: [java.lang.IllegalStateException: close failed]
+[exit 0]
+

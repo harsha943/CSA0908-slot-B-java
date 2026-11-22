@@ -1,0 +1,32 @@
+===== java SmartParking =====
+Constructor trace for ElectricCar:
+  [ctor] ElectricCar body runs last for TN03C3
+
+--- Normal operation ---
+bike gets F0-S0                               expected=0-0        actual=0-0        PASS
+car gets F0-S1                                expected=0-1        actual=0-1        PASS
+EV gets last free slot F1-S0                  expected=1-0        actual=1-0        PASS
+lot full returns null                         expected=null       actual=null       PASS
+bike 130 min fee                              expected=30.0       actual=30.0       PASS
+car 60 min (slab boundary) fee                expected=30.0       actual=30.0       PASS
+EV 130 min + 10 kWh                           expected=210.0      actual=210.0      PASS
+
+--- Boundary cases ---
+zero-minute parking                           expected=0.0        actual=0.0        PASS
+61 minutes = 2 hours                          expected=60.0       actual=60.0       PASS
+daily max cap (10 h car)                      expected=240.0      actual=240.0      PASS
+staff with pass parks free                    expected=0.0        actual=0.0        PASS
+
+--- Invalid cases ---
+duplicate registration                        expected=exception  actual=exception  PASS
+invalid reg number                            expected=exception  actual=exception  PASS
+negative duration                             expected=exception  actual=exception  PASS
+invalid slot release                          expected=false      actual=false      PASS
+exit unknown vehicle                          expected=exception  actual=exception  PASS
+
+--- Day collection (hand-calculated: 30 + 30 + 210 = 270) ---
+total collection                              expected=270.0      actual=270.0      PASS
+
+Passed 17, failed 0
+[exit 0]
+

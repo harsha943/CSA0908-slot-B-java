@@ -1,0 +1,16 @@
+===== java CastingDemo 130 30 =====
+Floor 0 has 20 slots
+Floor 1 has 50 slots
+Floor 2 has 35 slots
+
+minutes | wrong(int div) | wrong(cast) | correct(ceil)
+      0 |            0.0 |         0.0 |           0.0
+      1 |            0.0 |         0.0 |          30.0
+     59 |            0.0 |         0.0 |          30.0
+     60 |           30.0 |        30.0 |          30.0
+     61 |           30.0 |        30.0 |          60.0
+    130 |           60.0 |        60.0 |          90.0
+
+Fee from command line: Rs 90.0
+[exit 0]
+

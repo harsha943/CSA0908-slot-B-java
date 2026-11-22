@@ -1,0 +1,90 @@
+===== java ScannerStations =====
+run() vs start():
+  Direct-run finished 1 scripts on main
+
+Style 1 - extends Thread:
+  state before start: NEW
+  Station-1 alive? true, state RUNNABLE
+  Station-1 finished 10 scripts on Station-1
+  Station-2 finished 15 scripts on Station-2
+  Station-3 finished 20 scripts on Station-3
+  Station-4 finished 25 scripts on Station-4
+  after join: alive? false, state TERMINATED
+  Total scanned = 70
+
+Style 2 - implements Runnable:
+  Runner-1 finished 10 scripts
+  Runner-2 finished 15 scripts
+  Runner-3 finished 20 scripts
+  Runner-4 finished 25 scripts
+  Total scanned = 70
+[exit 0]
+
+===== java ScannerStations =====
+run() vs start():
+  Direct-run finished 1 scripts on main
+
+Style 1 - extends Thread:
+  state before start: NEW
+  Station-1 alive? true, state RUNNABLE
+  Station-1 finished 10 scripts on Station-1
+  Station-2 finished 15 scripts on Station-2
+  Station-3 finished 20 scripts on Station-3
+  Station-4 finished 25 scripts on Station-4
+  after join: alive? false, state TERMINATED
+  Total scanned = 70
+
+Style 2 - implements Runnable:
+  Runner-1 finished 10 scripts
+  Runner-2 finished 15 scripts
+  Runner-3 finished 20 scripts
+  Runner-4 finished 25 scripts
+  Total scanned = 70
+[exit 0]
+
+===== java ScannerStations =====
+run() vs start():
+  Direct-run finished 1 scripts on main
+
+Style 1 - extends Thread:
+  state before start: NEW
+  Station-1 alive? true, state RUNNABLE
+  Station-1 finished 10 scripts on Station-1
+  Station-2 finished 15 scripts on Station-2
+  Station-3 finished 20 scripts on Station-3
+  Station-4 finished 25 scripts on Station-4
+  after join: alive? false, state TERMINATED
+  Total scanned = 70
+
+Style 2 - implements Runnable:
+  Runner-1 finished 10 scripts
+  Runner-2 finished 15 scripts
+  Runner-3 finished 20 scripts
+  Runner-4 finished 25 scripts
+  Total scanned = 70
+[exit 0]
+
+===== java ScannerStations daemon =====
+run() vs start():
+  Direct-run finished 1 scripts on main
+
+Style 1 - extends Thread:
+  state before start: NEW
+  Station-1 alive? true, state RUNNABLE
+  Station-1 finished 10 scripts on Station-1
+  Station-2 finished 15 scripts on Station-2
+  Station-3 finished 20 scripts on Station-3
+  Station-4 finished 25 scripts on Station-4
+  after join: alive? false, state TERMINATED
+  Total scanned = 70
+
+Style 2 - implements Runnable:
+  Runner-1 finished 10 scripts
+  Runner-2 finished 15 scripts
+  Runner-3 finished 20 scripts
+  Runner-4 finished 25 scripts
+  Total scanned = 70
+
+Daemon station started; main ends now -> JVM exits without waiting for it.
+[exit 0]
+

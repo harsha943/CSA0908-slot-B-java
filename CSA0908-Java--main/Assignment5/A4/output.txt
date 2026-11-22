@@ -1,0 +1,8 @@
+===== java HostelSerialization =====
+Serialized size: 448 bytes
+Room 101 [Arun(192311001, pwd=null, phone=null), Kumar(192311003, pwd=null, phone=null)]
+Room 102 [Ravi(192311004, pwd=null, phone=null), Arun(192311001, pwd=null, phone=null)]
+Shared resident still one object after reload? true
+CSV size: 108 bytes
+[exit 0]
+

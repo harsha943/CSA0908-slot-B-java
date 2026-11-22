@@ -1,0 +1,9 @@
+===== java StaticDemo =====
+[static block] Facility class loaded
+Static counter   : North 1, South 2, North 3
+Instance counter : North 1, South 1  <- ticket number reused!
+Fee 100 with tax : 118.0
+Ticket created   : 1747585824
+Ticket reference cleared; object is eligible for GC
+[exit 0]
+

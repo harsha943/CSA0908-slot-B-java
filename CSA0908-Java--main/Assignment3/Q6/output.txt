@@ -1,0 +1,13 @@
+===== java TokenCounter =====
+Sum of tokens collected: 210 (expected 210)
+[exit 0]
+
+===== java WalletTransfer =====
+Completed. A=750 B=1250 total=2000 (expected 2000)
+[exit 0]
+
+===== java WalletTransfer deadlock =====
+DEADLOCK detected: A->B is BLOCKED, B->A is BLOCKED
+Conditions: mutual exclusion, hold-and-wait, no preemption, circular wait.
+[exit 0]
+

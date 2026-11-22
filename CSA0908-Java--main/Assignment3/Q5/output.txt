@@ -1,0 +1,25 @@
+===== java SeatBooking =====
+Seats sold: 10
+[exit 0]
+
+===== java BookingStrategies =====
+Race reproduction (unsafe), 10 runs, 10 seats:
+  run 1: sold 14 -> double bookings 4
+  run 2: sold 16 -> double bookings 6
+  run 3: sold 11 -> double bookings 1
+  run 4: sold 10 -> double bookings 0
+  run 5: sold 10 -> double bookings 0
+  run 6: sold 10 -> double bookings 0
+  run 7: sold 10 -> double bookings 0
+  run 8: sold 10 -> double bookings 0
+  run 9: sold 10 -> double bookings 0
+  run 10: sold 10 -> double bookings 0
+
+Strategy                 sold       ms
+synchronized method        10       16
+synchronized block         10       15
+AtomicBoolean CAS          10        8
+ReentrantLock              10        5
+ConcurrentHashMap          10        9
+[exit 0]
+

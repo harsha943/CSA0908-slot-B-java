@@ -1,0 +1,13 @@
+===== java DamagedFileTest =====
+Valid records: 2
+  [P1001, 192311001, Arun, 12, 4500.0]
+  [P1006, 192311006, Meena, 4, 3900.0]
+Rejected lines:
+  line 2: expected 5 fields, found 4
+  line 3: non-numeric value (For input string: "FOUR THOUSAND")
+  line 4: empty line
+  line 5: non-numeric value (For input string: "x9")
+  line 6: negative amount
+  line 8: expected 5 fields, found 3
+[exit 0]
+

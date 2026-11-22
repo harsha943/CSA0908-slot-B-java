@@ -1,0 +1,18 @@
+===== java ResultProcessor =====
+Files: 10,000 (injected bad: 60)
+ threads    time ms       ok   failed
+       1       1419     9940       60 summary correct
+       2       1018     9940       60 summary correct
+       4       1336     9940       60 summary correct
+       8       1482     9940       60 summary correct
+
+Sample failures:
+  s4013.csv -> CorruptFileException: s4013.csv: bad mark 'abc'
+  s5013.csv -> CorruptFileException: s5013.csv: bad mark 'abc'
+  s13.csv -> CorruptFileException: s13.csv: bad mark 'abc'
+  s8021.csv -> CorruptFileException: s8021.csv: expected 6 fields
+  s9021.csv -> CorruptFileException: s9021.csv: expected 6 fields
+  s3021.csv -> CorruptFileException: s3021.csv: expected 6 fields
+CPU cores available: 16
+[exit 0]
+

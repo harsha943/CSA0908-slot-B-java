@@ -1,0 +1,29 @@
+===== java StorageDemo =====
+Saved answer01.pdf
+Error: Could not store answer02.pdf
+Cause: Disk quota exceeded
+[exit 0]
+
+===== java ExamPortal =====
+Scenario                     | Student sees
+valid submission             | Submission accepted
+not registered               | Rejected: 192399999 not registered for CSA09
+file too large               | Rejected: File 900 KB exceeds 500 KB
+disk full (chained)          | Server problem, please retry. (cause logged: No space left on device)
+window closed                | Rejected: Exam window closed at 2026-11-21T20:17:48.268130300
+
+Full chained stack trace:
+ExamPortal$StorageFailureException: Could not store answer of 192311001
+	at ExamPortal$StorageLayer.write(ExamPortal.java:39)
+	at ExamPortal.main(ExamPortal.java:90)
+Caused by: java.io.IOException: No space left on device
+	at ExamPortal$StorageLayer.write(ExamPortal.java:37)
+	... 1 more
+getCause() -> java.io.IOException: No space left on device
+
+Re-thrown WITHOUT cause (information lost):
+ExamPortal$PortalException: Could not store answer
+	at ExamPortal.main(ExamPortal.java:99)
+getCause() -> null
+[exit 0]
+
